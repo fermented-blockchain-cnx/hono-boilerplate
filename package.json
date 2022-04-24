@@ -1,0 +1,40 @@
+{
+  "name": "hono-boilerplate",
+  "version": "1.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest ./test/* --verbose",
+    "build": "esbuild --bundle --sourcemap --minify --outdir=dist ./src/index.ts",
+    "dev": "miniflare --live-reload --debug -s ./content",
+    "deploy": "wrangler publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fermented-blockchain-cnx/hono-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fermented-blockchain-cnx/hono-boilerplate/issues"
+  },
+  "homepage": "https://github.com/fermented-blockchain-cnx/hono-boilerplate#readme",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.7.1",
+    "@cloudflare/wrangler": "^1.19.12",
+    "@types/jest": "^27.4.1",
+    "esbuild": "^0.14.38",
+    "esbuild-jest": "^0.5.0",
+    "jest": "^27.5.1",
+    "jest-environment-miniflare": "^2.4.0",
+    "jest-node-exports-resolver": "^1.1.6",
+    "miniflare": "^2.4.0"
+  },
+  "dependencies": {
+    "@types/service-worker-mock": "^2.0.1",
+    "ethers": "^5.6.4",
+    "hono": "^1.0.0",
+    "rimraf": "^3.0.2"
+  }
+}
