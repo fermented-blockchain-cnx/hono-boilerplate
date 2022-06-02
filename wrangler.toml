@@ -1,21 +1,23 @@
 name = "hono-boilerplate"
 #main = "src/index.ts"
 compatibility_date = "2022-04-17"
-type = "javascript"
+# type = "javascript"
 
 account_id = ""
 workers_dev = true
 
-webpack_config = "webpack.config.js"
+# webpack_config = "webpack.config.js"
 kv_namespaces = [ ]
+
+main = "dist/index.js"
 
 
 [build]
 command = "yarn run build"
 
-[build.upload]
-format = "service-worker"
+# [build.upload]
+# format = "service-worker"
 
 [site]
 bucket = "./content"
-entry-point = "."
+# entry-point = "."

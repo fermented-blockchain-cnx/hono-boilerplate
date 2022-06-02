@@ -20,6 +20,14 @@ app.get('/hello', async (c) => {
   return c.json({ yay: content })
 })
 
+app.post('/auth', async (c) => {
+  return c.text('ok', 200)
+})
+
+app.post('/auth', async (c) => {
+  return c.text('ok', 200)
+})
+
 app.get('/', async (c) => {
   const provider = new JsonRpcProvider({
     url: providers[network],
