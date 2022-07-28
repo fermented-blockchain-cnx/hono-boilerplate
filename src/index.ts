@@ -36,7 +36,7 @@ app.get('/', async (c) => {
   })
   const contract: DustBoyNFT = DustBoyNFT__factory.connect('0xCc9260CA4f41D04db0cfd9529a406607E9988EC5', provider)
   console.log(await contract.MAX_SUPPLY())
-  return c.json({ hello: 'world' })!
+  return c.json({ hello: 'world yay 3' })!
 })
 
 app.get('/balance/jfin/:id', async (c) => {
@@ -45,7 +45,7 @@ app.get('/balance/jfin/:id', async (c) => {
     skipFetchSetup: true,
   })
 
-  const balance:BigNumber = await provider.getBalance(c.req.param('id'))
+  const balance: BigNumber = await provider.getBalance(c.req.param('id'))
   const out = utils.formatEther(balance)
   const outFloat = parseFloat(out)
 
